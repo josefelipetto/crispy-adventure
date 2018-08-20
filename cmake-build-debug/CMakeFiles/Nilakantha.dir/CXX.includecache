@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/josefelipetto/Experiments/Nilakantha/main.cpp
+cstdint
+-
+iostream
+-
+cmath
+-
+chrono
+-
+
