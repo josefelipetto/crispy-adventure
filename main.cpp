@@ -1,3 +1,11 @@
+/**
+    main.cpp
+    Purpose: Analyze computer performance on calculating PI number.
+
+    @author José Henrique Felipetto
+    @version 1.0 20/08/2018
+*/
+
 #include <cstdint>
 #include <iostream>
 #include <cmath>
@@ -6,7 +14,11 @@
 using namespace std;
 using namespace chrono;
 
+/**
+    Get the number of clocks on the moment that is called
 
+    @return the number of clocks on the moment
+*/
 uint64_t rdtscp(){
     unsigned int lo,hi;
     asm	volatile ("rdtscp":"=a"	(lo),"=d"(hi));
@@ -25,7 +37,7 @@ int main()
     long double aux = 0;
 
     long double exp = 1;
-
+    
     for(size_t i = 0; i < 1e9; i++ )
     {
         aux += ( exp / ( (2*i+2)*(2*i+3)*(2*i+4) ));
